@@ -8,6 +8,8 @@ st.markdown("Selecciona el archivo a descargar")
 files = listdir(".")
 # Solo los que acaban en .csv
 files = [f for f in files if f.endswith(".csv")]
+# Ordenar alfabeticamente
+files = sorted(files)
 #st.text(files)
 # Crear boton desplegable
 file = st.selectbox("Archivo", files)
