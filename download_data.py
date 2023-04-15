@@ -11,6 +11,11 @@ activos = ['AUDUSD', 'GBPUSD', 'EURUSD', 'Brent', 'Bitcoin', 'Dollar Index', 'S&
 st.write("## Mapa de nombres - activos")
 st.markdown("Última actualización: 15-04-2023")
 st.table(pd.DataFrame({"Archivo": files, "Activo": activos}))
+st.write("## Ejemplo de los datos")
+st.markdown("EURUSD datos")
+eurusd = pd.read_csv("./6E.csv", sep=";")
+st.dataframe(eurusd.head(10))
+
 st.title("Descargar datos")
 st.markdown("Selecciona los datos a descargar")
 file = st.selectbox("Archivo", files)
